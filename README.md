@@ -12,3 +12,7 @@ Udforskende brug af gestik- og stemmestyring i interaktionen mellem lydtekniker 
 
 ## Rumklang
 ![Visualisering af rumklang-interaktion](images/interaction-reverb.png)
+
+## MIDI-routing
+![Routing af MIDI i Logic Pro X](images/midi-routing.png)
+
