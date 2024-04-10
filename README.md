@@ -4,8 +4,8 @@ Udforskende brug af gestik- og stemmestyring i interaktionen mellem lydtekniker 
 ## Lydstyrke og panorering
 ![Visualisering af volume-interaktion](images/interaction-volume.png)
 
-## Kompression
-![Visualisering af kompressions-interaktion](images/interaction-compression.png)
+## Kompressor
+![Visualisering af kompressions-interaktion](images/interaction-compressor.png)
 
 ## Equalizer
 ![Visualisering af eq-interaktion](images/interaction-equalizer.png)
