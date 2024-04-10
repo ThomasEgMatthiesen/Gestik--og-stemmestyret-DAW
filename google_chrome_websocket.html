@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript">
+        var state;
+
+        // Check if the browser supports WebSockets
+        if ("WebSocket" in window) {
+            // Connect to the WebSocket
+            var ws = new WebSocket("ws://localhost:1337/p5websocket");
+
+            // Listen for messages from WebSocket server
+            ws.onmessage = function (event) {
+                state = event.data;
+            }
+        } else {
+            // Alert if WebSocket is not supported
+            alert("WebSocket NOT supported by your Browser!");
+        }
+
+        // Start speech recognition (supported only in Chrome)
+        var recognition = new webkitSpeechRecognition();
+
+        // Set language and continuous recognition
+        recognition.lang = "da"; // US-english
+        recognition.continuous = true;
+
+        // When speech recognition receives a result
+        recognition.onresult = function(event) {
+            // Get the current transcript
+            var transcript = event.results[event.results.length-1][0].transcript;
+            // Send transcript via WebSocket if state is "active"
+            if (state === "active") {
+                ws.send(transcript);
+            }
+        }
+
+        // Restart recognition on timeout
+        recognition.onend = function(){
+            recognition.start();
+        }
+
+        // Start the recognition
+        recognition.start();
+
+    </script>
+</head>
+<body>
+</body>
+</html>
