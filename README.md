@@ -1,4 +1,4 @@
-#Understøttelse af lydteknikerens kunstfærdighed via multimodalt interaktionsdesign
+# Understøttelse af lydteknikerens kunstfærdighed via multimodalt interaktionsdesign
 
 Udforskende brug af gestik- og stemmestyring i interaktionen mellem lydtekniker og DAW (Digital Audio Workstation). Prototypen tillader kropslig interaktion med lydmaterialet, der fordrer bedre lyttefokus og færre visuelle forstyrrelser.
 
